@@ -25,9 +25,14 @@ SECRET_KEY = 'b9rcz^eu7sx%rs3%e=wu_s!gs4)a7p42!=kuj)bbfva1v0d^ju'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['authserver', 'webfront']
 
 
+JWT_AUTH = {
+    'JWT_PUBLIC_KEY': open('jwtRS256.key.pub').read(),
+    'JWT_PRIVATE_KEY': open('jwtRS256.key').read(),
+    'JWT_ALGORITHM': 'RS256',
+}
 # Application definition
 
 INSTALLED_APPS = [
