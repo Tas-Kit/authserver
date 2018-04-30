@@ -20,18 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b9rcz^eu7sx%rs3%e=wu_s!gs4)a7p42!=kuj)bbfva1v0d^ju'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 ALLOWED_HOSTS = ['authserver', 'webfront']
 
 
 JWT_AUTH = {
-    'JWT_PUBLIC_KEY': open('jwtRS256.key.pub').read(),
-    'JWT_PRIVATE_KEY': open('jwtRS256.key').read(),
     'JWT_ALGORITHM': 'RS256',
     'JWT_EXPIRATION_DELTA': datetime.timedelta(minutes=30),
     'JWT_ALLOW_REFRESH': True,

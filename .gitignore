@@ -101,3 +101,5 @@ ENV/
 .mypy_cache/
 
 *.sqlite3
+
+authserver/settings/staging.key
