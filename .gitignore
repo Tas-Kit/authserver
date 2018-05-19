@@ -103,3 +103,5 @@ ENV/
 *.sqlite3
 
 authserver/settings/staging.key
+
+authserver/settings/staging.key.pub
