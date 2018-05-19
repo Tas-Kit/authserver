@@ -4,7 +4,7 @@ from authserver.settings.basic import *
 setting_path = 'authserver/settings/'
 DEBUG = False
 JWT_AUTH['JWT_PRIVATE_KEY'] = open(setting_path + 'staging.key').read()
-JWT_AUTH['JWT_PUBLIC_KEY'] = open(setting_path + 'setting.key.pub').read()
+JWT_AUTH['JWT_PUBLIC_KEY'] = open(setting_path + 'staging.key.pub').read()
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # X_FRAME_OPTIONS = 'DENY'
